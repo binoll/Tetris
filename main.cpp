@@ -1,4 +1,4 @@
-#include <SFML/Graphics.hpp>
+#include "libs.hpp"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(650, 700), "Tetris", sf::Style::Close);
