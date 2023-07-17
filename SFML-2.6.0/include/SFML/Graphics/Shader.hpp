@@ -709,7 +709,7 @@ private:
     bool compile(const char* vertexShaderCode, const char* geometryShaderCode, const char* fragmentShaderCode);
 
     ////////////////////////////////////////////////////////////
-    /// \brief Bind all the textures used by the shader
+    /// \brief Bind all the etc used by the shader
     ///
     /// This function each texture to a different unit, and
     /// updates the corresponding variables in the shader accordingly.
@@ -786,7 +786,7 @@ private:
 /// \li scalars: \p float, \p int, \p bool
 /// \li vectors (2, 3 or 4 components)
 /// \li matrices (3x3 or 4x4)
-/// \li samplers (textures)
+/// \li samplers (etc)
 ///
 /// Some SFML-specific types can be converted:
 /// \li sf::Color as a 4D vector (\p vec4)
