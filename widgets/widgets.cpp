@@ -6,13 +6,15 @@ Background::Background(const std::vector<std::string>& vector_paths,
     sf::Texture texture;
 
     for (const auto& vector_path : vector_paths) {
-        texture.loadFromFile(vector_path);
+        if (!texture.loadFromFile(vector_path)) {
+            // throw CustomException();
+        }
         this->vector_textures.push_back(texture);
     }
 }
 
 sf::Texture Background::update_texture() {
-    static short texture_number = 0;
+    static int texture_number = 0;
     sf::Texture texture = this->vector_textures[texture_number];
 
     if (clock.getElapsedTime().asSeconds() >= switch_time) {
@@ -30,4 +32,3 @@ void Background::draw(sf::RenderWindow& window) {
 
     window.draw(sprite);
 }
-

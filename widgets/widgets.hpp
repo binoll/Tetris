@@ -8,7 +8,7 @@ class Background {
 
     Background(const std::vector<std::string>& vector_paths,
                sf::Clock& clock,
-               float switch_time = 0.15f);
+               float switch_time = 0.2f);
 
     ~Background() = default;
 
