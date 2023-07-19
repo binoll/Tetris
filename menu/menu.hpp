@@ -6,18 +6,19 @@
 
 class Menu {
  public:
-    explicit Menu(MenuSettings settings);
+    explicit Menu(MenuSettings& settings);
 
     Menu(const std::string& music_path,
-         float music_volume,
-         BackgroundSettings background_settings);
+         const float& music_volume,
+         BackgroundSettings& background_settings,
+         TextSettings& text_settings);
 
     ~Menu() = default;
 
     void draw(sf::RenderWindow& window);
 
  private:
-    float music_volume;
     Background background;
+    Text text;
     sf::Music music;
 };
