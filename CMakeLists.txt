@@ -6,6 +6,6 @@ set(SFML_DIR "SFML-2.5.1/lib/cmake/SFML/")
 
 find_package(SFML COMPONENTS graphics audio REQUIRED)
 
-add_executable(Tetris main.cpp libs.hpp menu/menu.cpp menu/menu.hpp widgets/widgets.cpp widgets/widgets.hpp)
+add_executable(Tetris main.cpp libs.hpp menu/menu.cpp menu/menu.hpp widgets/widgets.cpp widgets/widgets.hpp settings/settings.hpp)
 
 target_link_libraries(Tetris sfml-graphics sfml-audio sfml-window)
