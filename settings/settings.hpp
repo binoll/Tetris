@@ -21,11 +21,23 @@ struct BackgroundSettings {
             "../etc/textures/menu/background/15.png",
             "../etc/textures/menu/background/16.png"
     };
-    float switch_time = 0.2f;
+    const float switch_time = 0.2f;
+};
+
+struct TextSettings {
+    const float x = 120;
+    const float y = 50;
+    const std::string text_string = "T E T R I S";
+    const unsigned int size_text = 80;
+    const float outline_thickness = 5;
+    sf::Color fill_color = sf::Color::White;
+    sf::Color outline_color = sf::Color::Black;
+    const std::string font_path = "../etc/fonts/pixel.ttf";
 };
 
 struct MenuSettings {
     const std::string music_path = "../etc/songs/menu/background.wav";
     float music_volume = 5.0f;
     BackgroundSettings background_settings;
+    TextSettings text_settings;
 };
