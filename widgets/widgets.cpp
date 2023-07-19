@@ -1,8 +1,19 @@
 #include "widgets.hpp"
 
+Background::Background(BackgroundSettings settings) :
+                       switch_time(settings.switch_time) {
+    sf::Texture texture;
+
+    for (const auto& vector_path : settings.vector_paths) {
+        if (!texture.loadFromFile(vector_path)) {
+            // throw CustomException();
+        }
+        this->vector_textures.push_back(texture);
+    }
+}
+
 Background::Background(const std::vector<std::string>& vector_paths,
-                       sf::Clock& clock,
-                       float switch_time) : clock(clock), switch_time(switch_time) {
+                       float switch_time) : switch_time(switch_time) {
     sf::Texture texture;
 
     for (const auto& vector_path : vector_paths) {

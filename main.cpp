@@ -1,7 +1,10 @@
 #include "libs.hpp"
+#include "menu/menu.hpp"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(650, 700), "Tetris", sf::Style::Close);
+    MenuSettings settings;
+    Menu menu(settings);
 
     while (window.isOpen()) {
         sf::Event event;
@@ -13,6 +16,7 @@ int main() {
         }
 
         window.clear();
+        menu.draw(window);
         window.display();
     }
 

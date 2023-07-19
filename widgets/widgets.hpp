@@ -1,14 +1,14 @@
 #pragma once
 
 #include "../libs.hpp"
+#include "../settings/settings.hpp"
 
 class Background {
  public:
-    Background() = delete;
+    explicit Background(BackgroundSettings settings);
 
     Background(const std::vector<std::string>& vector_paths,
-               sf::Clock& clock,
-               float switch_time = 0.2f);
+               float switch_time);
 
     ~Background() = default;
 
