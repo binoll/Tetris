@@ -1,16 +1,11 @@
-cmake_minimum_required(VERSION 3.00)
+cmake_minimum_required(VERSION 3.10)
 project(Tetris)
 
-set(CMAKE_CXX_STANDARD 14)
-set(SFML_DIR "SFML-2.6.0/lib/cmake/SFML/")
-set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc")
-set(SFML_STATIC_LIBRARIES TRUE)
+set(CMAKE_CXX_STANDARD 20)
+set(SFML_DIR "SFML-2.5.1/lib/cmake/SFML/")
 
-find_package(SFML COMPONENTS graphics audio window system REQUIRED)
+find_package(SFML COMPONENTS graphics audio REQUIRED)
 
-add_executable(Tetris main.cpp menu/menu.cpp widgets/widgets.cpp)
+add_executable(Tetris main.cpp libs.hpp menu/menu.cpp menu/menu.hpp widgets/widgets.cpp widgets/widgets.hpp)
 
-target_link_libraries(Tetris sfml-graphics sfml-audio sfml-window sfml-system)
-
-add_custom_target(openal32 COMMAND ${CMAKE_COMMAND} -E copy "${PROJECT_SOURCE_DIR}/SFML-2.6.0/bin/openal32.dll" ${CMAKE_BINARY_DIR})
-add_dependencies(Tetris openal32)
+target_link_libraries(Tetris sfml-graphics sfml-audio sfml-window)

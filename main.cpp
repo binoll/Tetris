@@ -2,7 +2,7 @@
 #include "menu/menu.hpp"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(650, 700), "Tetris", sf::Style::Close);
+    sf::RenderWindow window(sf::VideoMode(650, 700), "Tetris", sf::Style::Default);
     MenuSettings settings;
     Menu menu(settings);
 
