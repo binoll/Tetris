@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(Tetris)
 
 set(CMAKE_CXX_STANDARD 20)
-set(SFML_DIR "SFML-2.5.1/lib/cmake/SFML/")
+set(SFML_DIR "SFML-2.6.1/lib/cmake/SFML/")
 
 find_package(SFML COMPONENTS graphics audio REQUIRED)
 
