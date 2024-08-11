@@ -1,5 +1,5 @@
 #include "libs.hpp"
-#include "menu/menu.hpp"
+#include "src/menu/menu.hpp"
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(650, 700), "Tetris", sf::Style::Default);
@@ -7,7 +7,7 @@ int main() {
     Menu menu(settings);
 
     while (window.isOpen()) {
-        sf::Event event;
+        auto event = sf::Event();
 
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed) {

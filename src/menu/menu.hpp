@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../libs.hpp"
+#include "../../libs.hpp"
 #include "../widgets/widgets.hpp"
 #include "../settings/settings.hpp"
 
